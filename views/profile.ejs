@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<title>TodoX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<!-- TodoX CSS -->
+		<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+	</head>
+	<body ng-controller="profileCtrl">
+		 <%- include('partials/nav'); %>
+		<br/>
+		<div class="container">
+			<div class="row">
+				<%- include('partials/userProfile'); %>
+				<div class="col-md-8">
+					<p ng-if="!todo"><em>There are no task, create one now!</em></p>
+					<div class="list-group">
+						<div class="checkbox list-group-item" ng-repeat="todo in todos | orderBy:date">
+							<% if(user) { %>
+							
+							<label ng-if="todo">
+								<input type="checkbox" ng-click="deleteTodo(todo._id)"/> {{todo.text}} <span class="label label-danger priority">{{todo.priority}}</span>
+							</label>
+							<% } %>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<form class="form-group">
+						<input type="text" class="form-control" ng-model="formData.text" placeholder="Add a Task" required/>
+						<br/>
+						Task Priority:
+						<select ng-model="formData.priority">
+							<option value="High">High</option>
+							<option value="Medium">Medium</option>
+							<option value="Low">Low</option>
+						</select>
+						<hr/>
+						<input type="submit" ng-click="createTodoTask()" placeholder="Submit" class="form-control"/>
+					</form>
+				</div>
+				<%- include('partials/foot'); %>
+			</div>
+		</div>
+		
+		<!-- Angular JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<!-- TodoX Core JS -->
+		<script type="text/javascript" src="/controllers/core.js"></script>
+	</body>
+</html>

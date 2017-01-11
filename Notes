@@ -1,0 +1,19 @@
+/*
+ * MEAN STACK NOTES
+ * ANDY LANCLOS
+ * LAST UPDATE: JUNE 22, 2016
+ */
+ 
+====================
+BASIC PACKAGES     ||
+====================
+--> Mongoose - object modeler for our MongoDB database.
+--> Express - the server framework.
+
+====================
+OTHER PACKAGES     ||
+====================
+--> Passport - Authenticating with different methods. (Ex:// Locally, Facebook, Twitter, Etc.)
+--> Ejs - Templating engine.
+--> Connect-flash - allows for passing session flashdata messages.
+--> Bcyrpt-nodejs - gives us the ability to hash passwords.

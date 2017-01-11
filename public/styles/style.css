@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+html {
+	height: 100%;
+	position: relative;
+}
+body {
+  padding: 50px;
+  font: 14px "Titillium", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #A8383B 0%,#226764 100%);
+  background: -webkit-linear-gradient(top, #A8383B 0%,#226764 100%);
+  background: -moz-linear-gradient(top, #A8383B 0%,#226764 100%);
+  height: 100vh;
+}
+
+a {
+  color: #00B7FF;
+}
+
+form, h1, h2, h3, p {
+	color: #FFF;
+}
+
+form select {
+	color: #000;
+}
+
+.fa-cog {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: #FFF;
+}
+
+.fa-cog:hover {
+	color: #ECECCE;
+}
+
+.jumbotron {
+	position: relative;
+}
+
+.label {
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+.container {
+
+}
+
+.mastfoot {
+	position: absolute;
+	bottom: 0;
+}
+
+.mastfoot a {
+	color: #d9534f;
+	text-decoration: none;
+}
+
+.fa-lg {
+	margin-right: 15px;
+	color: #FFF;
+}
+
+.jumbotron {
+	background: rgba(0,0,0,0.3);
+	color: #FFFFFF;
+}
+
+.jumbotron img {
+	max-width: 225px;
+	width: 100%;
+}
+
+.priority {
+	font-size: 10px;
+}
+
+.x {
+	color: #d9534f;
+	vertical-align: bottom;
+}
+
+.navUser p {
+	margin-top: 17px;
+	color: #FFF;
+}
+
+.navUser a {
+	color: #d9534f;
+	text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	font-size: 11px;
+	color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #FFF;
+}
+
+.navbar-brand img {
+	max-width: 90px;
+	width: 100%;
+}
+
+#welcomeP {
+	font-size: 12px;
+}
+
+.userColor {
+	color: #d9534f;
+}
+
+.profile-img {
+	position: relative;
+	max-width: 100px;
+}
+
+.profile-img img {
+	max-width: 100px;
+	width: 100%;
+	border-radius: 50%;
+	border: 2px solid #FFF;
+	float: left;
+	margin-right: 10px;
+}
+
+.task-count {
+	position: absolute;
+	top: 75px;
+	right: 0;
+}
+
+.mylabel {
+	background: #d9534f;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.profile-header {
+	float: left;
+	margin-top: -20px;
+	margin-bottom: 50px;
+	line-height: 0;
+}
+
+.profile-header h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.profile-header p {
+	font-size: 12px;
+	color: #d9534f;
+	text-transform: uppercase;
+}
+
+.profile-info {
+	text-align: right;
+}
+

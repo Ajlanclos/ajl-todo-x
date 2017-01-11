@@ -1,0 +1,20 @@
+<div class="jumbotron">
+	<a href="/edit"><i class="fa fa-cog"></i></a>
+	<div class="profile-img">
+		<img src="../imgs/whitandi.jpg" alt=""/>
+		<div class="task-count">
+
+		</div>
+	</div>
+
+	<div class="profile-header">
+		<h1><%= user.handle %></h1>
+		<p><%= user.local.email %></p>
+
+	</div>
+	<div class="profile-info">
+		<strong>Account Id</strong>: <%= user._id %>
+
+	</div>
+	<span class="label label-danger">{{todos.length}}</span>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<title>TodoX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- TodoX CSS -->
+		<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+	</head>
+	<body>
+		 <%- include('partials/nav'); %>
+		<br/>
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron text-center">
+					<h1>Welcome to <img src="../../imgs/logo-light.png" alt="logo"/></h1>
+					<h3>A M.E.A.N. stack application by <span><strong>Andy Lanclos</strong></span></h3>
+					<% if(!user) { %>
+						<a href="/login" class="btn btn-success">Login</a>
+						<a href="/register" class="btn btn-danger">Register</a>
+					<% } else if(user) { %>
+						<p id="welcomeP">Hey, <span class="userColor"><%= user.local.email %></span>, go create some task!</p>
+					<% } %>
+				</div>
+				<%- include('partials/foot'); %>
+			</div>
+		</div>
+		<
+		
+		<!-- Angular JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<!-- TodoX Core JS -->
+		<script type="text/javascript" src="/controllers/core.js"></script>
+	</body>
+</html>

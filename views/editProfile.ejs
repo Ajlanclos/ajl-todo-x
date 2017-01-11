@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="App">
+	<head>
+		<title>TodoX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<!-- TodoX CSS -->
+		<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+	</head>
+	<body>
+		 <%- include('partials/nav'); %>
+		<br/>
+		<!-- Start Page Content Below -->
+		<div class="container" ng-controller="profileCtrl">
+			<div class="row">
+				<h2 class="login-register"><i class="fa fa-edit fa-lg"></i>Edit Profile</h2>
+				<div class="col-md-5">
+					<hr/>
+					<% if (message.length > 0) { %>
+						<div class="alert alert-danger"><%= message %></div>
+					<% } %>
+					<form action="/profile" class="form-group">
+						Handle: <input type="text"  name="handle" ng-model="editFormData.handle" placeholder="<%= user.handle %>" class="form-control"/><br/>
+						Profile Image: <input type="file" ng-model="editFormData.pic" name="pic"/><br/>
+						<input type="submit" ng-click="editProfile()" class="btn btn-success" placeholder="Save &amp; Update"/>
+					</form>
+				</div>
+				<%- include('partials/foot'); %>
+			</div>
+		</div>
+		
+		<!-- Angular JS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<!-- TodoX Core JS -->
+		<script type="text/javascript" src="/controllers/core.js"></script>
+	</body>
+</html>
