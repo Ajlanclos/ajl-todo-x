@@ -17,7 +17,7 @@ var configDB = require('./config/database.js');
 var app = express();
 
 // MongoDB
-mongoose.connect(configDB.url);
+mongoose.connect(process.env.MONGOLAB_URI || configDB.url);
 
 require('./config/passport')(passport);
 
